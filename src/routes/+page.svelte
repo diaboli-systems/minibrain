@@ -120,13 +120,13 @@
     </p>
     <div style = "display: flex; align-items: center; justify-content: center; margin-top: 5px;">
         <a href = "/f/{file_preview.original}" style = "text-decoration: none;">
-            <button style = "margin-right: 5px;">
-                View Original
+            <button style = "margin-right: 10px;">
+                Original
             </button>
         </a>
         <a href = "/files/{file_preview.original}" style = "text-decoration: none;">
-            <button style = "margin-right: 5px;">
-                Go to &nbsp;<b>{file_preview.original}</b>
+            <button style = "margin-right: 10px;">
+                Go to&nbsp;<b>{file_preview.name}</b>
             </button>
         </a>
         <button on:click = {async () => await fetch_api("/api/file/delete", { original: file_preview.original }, true)} class = "danger">

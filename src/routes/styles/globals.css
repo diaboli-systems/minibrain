@@ -66,6 +66,11 @@ select {
     border-radius: var(--border-radius);
     color: var(--primary);
     padding: 5px 10px;
+    transition: var(--transition);
+}
+select:hover {
+    background-color: var(--background-lightest);
+    border-color: var(--background-lighter);
 }
 
 input {

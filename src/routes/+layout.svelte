@@ -75,8 +75,8 @@
         Create Folder
     </h2>
     <form action = "/api/folder/create" method = "POST" style = "display: flex; align-items:center;">
-        <input name = "name" placeholder = "folder name…" style = "margin-bottom: 10px;" required />
-        <button type = "submit">
+        <input name = "name" placeholder = "folder name…" required />
+        <button type = "submit" style = "margin-left: 10px;">
             Create
         </button>
     </form>

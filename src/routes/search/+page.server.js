@@ -7,18 +7,25 @@ export function load({ url }) {
         let found = [];
 
         files.forEach(file => {
-            if (file.name.toLowerCase().includes(url.searchParams.get("query").toLowerCase())) {
-                found.push(file);
+            if (file.name.toLowerCase().includes(url.searchParams.get("file").toLowerCase())) {
+                if (url.searchParams.get("folder") != "all") {
+                    if (file.folder == url.searchParams.get("folder")) {
+                        found.push(file)
+                    }
+                } else {
+                    found.push(file);
+                }
             }
         });
 
         return {
-            search: url.searchParams.get("query"),
+            search: url.searchParams.get("file"),
+            folder: url.searchParams.get("folder"),
             found
         }
     } catch (e) {
         return {
-            search: url.searchParams.get("query"),
+            search: url.searchParams.get("file"),
             found: []
         }
     }
