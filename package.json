@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "build": "vite build",
-    "minibrain": "vite preview",
+    "start": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
     "exit": "npx kill-port 5173",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
@@ -22,6 +22,8 @@
   },
   "type": "module",
   "dependencies": {
-    "fs": "^0.0.1-security"
+    "cloudinary": "^2.2.0",
+    "fs": "^0.0.1-security",
+    "postgres": "^3.4.4"
   }
 }

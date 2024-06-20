@@ -15,5 +15,5 @@ export function read_file(path) {
 }
 
 export function write_file(path, content) {
-    fs.writeFileSync(path, content, "utf-8");
+    fs.writeFileSync(path, content);
 }

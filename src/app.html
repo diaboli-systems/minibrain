@@ -10,5 +10,10 @@
 		<div style = "display: contents;">
 			%sveltekit.body%
 		</div>
+		<script>
+			document.getElementById("file").onchange = function () {
+				document.getElementById("fileLabel").innerText = String(this.value.slice("C:\\fakepath\\".length));
+			};
+		</script>
 	</body>
 </html>

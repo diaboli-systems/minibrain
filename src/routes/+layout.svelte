@@ -87,7 +87,10 @@
     </button>
     <form action = "/api/file/upload" method = "POST" enctype = "multipart/form-data">
         <div style = "display: flex; align-items: center;">
-            <input type = "file" name = "file" required />
+            <label for = "file" id = "fileLabel" style = "cursor: pointer;">
+                Select a File
+            </label>
+            <input type = "file" id = "file" name = "file" accept = "*" required style = "display: none;" />
             <select name = "folder" style = "margin-left: 10px;">
                 {#each data.folders as folder}
                     <option value = {folder.name}>{folder.name}</option>
